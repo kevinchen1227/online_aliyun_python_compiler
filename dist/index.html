@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - File Upload</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+ <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+<link href="http://hayageek.github.io/jQuery-Upload-File/4.0.11/uploadfile.css" rel="stylesheet">
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://hayageek.github.io/jQuery-Upload-File/4.0.11/jquery.uploadfile.min.js"></script>
+-->
+
+ 
+</head>
+
+<body>
+<!-- <body class="file-process-open"> partial:index.partial.html -->
+<div class="header-container-wrapper">
+  <div class="header-container">
+    <div class="custom-header-bg">
+      <div class="page-center">
+        <div class="logo">HigherCloud Online Python Runner-Aliyun</div>
+        <div class="navigation">
+        <a href="#" class="button open-progress" style="display:none"><i class="fa fa-tasks" aria-hidden="true"></i></a>
+          <ul>
+              <li><a href="#" class="button click-upload"><i class="fa fa-cloud-upload" aria-hidden="true"></i>Upload</a></li>
+            <!--<li><a href="#" class="button open-progress"><i class="fa fa-tasks" aria-hidden="true"></i>Progress</a></li>// -->
+          </ul> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="body-container-wrapper">
+  <div class="body-container">
+    <div class="page-center">
+      
+      <i class="fa fa-cloud" aria-hidden="true"></i>
+      <h1>Upload <strong>Python scripts in a zip file</strong> to perform</h1>
+      <table width="50%">
+     <tr>
+      <td><a class="upload" style="visibility: hidden;" id="call-to-aliyun" name="aliyun"><span>Alyun</span></a><button class="upload" type="button" id="call-aliyun">Aliyun</button></td>   
+      <td><a class="upload" style="visibility: hidden;" id="call-to-tencent" name="tencent"><span>Tencent</span></a><button class="upload" type="button" id="call-tencent">Tencent</button></td>
+      <td><a class="upload" style="visibility: hidden;" id="call-to-aws"  name="aws"><span>Aws</span></a><button class="upload" type="button" id="call-aws">Aws</button></td>
+      <td><a class="upload" style="visibility: hidden;" id="call-to-gcp"  name="gcp"><span>Gcp</span></a><button class="upload" type="button" id="call-gcp">Gcp</button></td> 
+       </tr></table>
+      <form id="upload" method="post"  enctype="multipart/form-data">
+        <div id="drop">
+      <input type="file" name="upl" id="upl" multiple  multiple class="upload-hidden">
+          </div>
+        </form>
+      <div class="file-upload-bar">
+        <div class="bar-wrapper">
+          <div class="overall"><span>Overall Progress</span>
+            <div class="progress-bar-overall">
+              <span><b>20%</b></span>
+            </div>
+          </div>
+          <div class="individual-files">
+            <!--<ul>
+              <li height="100%">
+                <span class="filename"><i>File Name:</i><b>xyz.jpg</b></span>
+                <span class="filesize"><i>File Size:</i><b>Mb</b></span>
+                <span class="file-link"><i>File Link</i><b><input value="http://www.qbus.com/txt.jpg"></b></span>
+                <span class="copy-link"><b>Copy Link</b></span>
+
+              </li>
+
+            </ul>//-->
+                            <textarea readonly="" id="output" class="output"></textarea>
+            </div>
+        </div>
+      </div>
+      <div class="file-upload-bar-closed"></div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-container-wrapper">
+  <div class="footer-container">
+    <div class="custom-footer-bg">
+      <div class="page-center">
+        <p>@Copyright HigherCloud</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+<!--
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://demo.tutorialzine.com/2013/05/mini-ajax-file-upload-form/assets/js/jquery.knob.js'></script>
+<script src='https://demo.tutorialzine.com/2013/05/mini-ajax-file-upload-form/assets/js/jquery.ui.widget.js'></script>
+<script src='https://demo.tutorialzine.com/2013/05/mini-ajax-file-upload-form/assets/js/jquery.iframe-transport.js'></script>
+
+<script src='https://demo.tutorialzine.com/2013/05/mini-ajax-file-upload-form/assets/js/jquery.fileupload.js'></script>
+--> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://demo.tutorialzine.com/2013/05/mini-ajax-file-upload-form/assets/js/jquery.knob.js'></script>
+<script src='https://demo.tutorialzine.com/2013/05/mini-ajax-file-upload-form/assets/js/jquery.ui.widget.js'></script>
+<script src='https://demo.tutorialzine.com/2013/05/mini-ajax-file-upload-form/assets/js/jquery.iframe-transport.js'></script>
+<!-- <script src='https://demo.tutorialzine.com/2013/05/mini-ajax-file-upload-form/assets/js/jquery.fileupload.js'></script>
+-->
+<script  src="js/cors/jquery.postmessage-transport.js"></script>
+<script  src="js/cors/jquery.xdr-transport.js"></script>
+<script  src="js/jquery.fileupload.js"></script>
+<script  src="js/script.js"></script>
+</body>
+</html>
